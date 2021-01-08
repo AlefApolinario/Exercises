@@ -1,2 +1,2 @@
 # Exercises
-Repository with basic programming projects
+Repository containing basic programming projects
