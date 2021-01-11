@@ -59,7 +59,7 @@ public class Tabuleiro implements CampoObservador{
 	}
 
 
-	private void gerarCampos() {
+	public void gerarCampos() {
 		for (int linha = 0; linha < linhas; linha++) {
 			for (int coluna = 0; coluna < colunas; coluna++) {
 				Campo campo = new Campo(linha,coluna);
@@ -71,7 +71,7 @@ public class Tabuleiro implements CampoObservador{
 		
 	}
 	
-	private void associarVizinhos() {
+	public void associarVizinhos() {
 		for(Campo c1 : campos) {
 			for(Campo c2 : campos) {
 				c1.adicionarVizinho(c2);
@@ -80,7 +80,7 @@ public class Tabuleiro implements CampoObservador{
 		
 	}
 	
-	private void sortearMinas() {
+	public void sortearMinas() {
 		long minasArmadas = 0;
 		Predicate<Campo> minado = c -> c.isMinado();
 		

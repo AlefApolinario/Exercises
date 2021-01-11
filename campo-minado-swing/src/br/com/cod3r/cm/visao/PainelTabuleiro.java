@@ -9,7 +9,7 @@ import javax.swing.SwingUtilities;
 import br.com.cod3r.cm.modelo.Tabuleiro;
 
 @SuppressWarnings("serial")
-public class PainelTabuleiro extends JPanel	 {
+public class PainelTabuleiro extends JPanel {
 	
 	public PainelTabuleiro(Tabuleiro tabuleiro){
 		setLayout(new GridLayout(tabuleiro.getLinhas(),tabuleiro.getColunas()));
@@ -24,7 +24,9 @@ public class PainelTabuleiro extends JPanel	 {
 				}else {
 					JOptionPane.showMessageDialog(this, "Perdeu :(");
 				}
-				tabuleiro.reiniciar();;
+				tabuleiro.reiniciar();
+				tabuleiro.sortearMinas();
+
 				
 			});
 			
